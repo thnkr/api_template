@@ -1,0 +1,30 @@
+
+<html>
+<head>
+    <link rel="stylesheet" src="css/browser.css">
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" src="components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="APP_ROOT">
+
+    <script type="text/x-handlebars">
+        {{outlet}}
+        {{hello}}
+
+        <h1>{{encrypt dynoForm}}</h1>
+        {{input valueBinding=dynoForm value="hello"}}
+
+
+  <a type="button" href="#" class="btn" {{action 'getDyno'}}> Get Input Value </a>
+
+        {{anyName}}
+        {{model}}
+
+    </script>
+
+</div>
+</body>
+
+<script data-main="js/config.js" src="components/requirejs/require.js"></script>
+</html>
