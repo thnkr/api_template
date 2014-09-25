@@ -15,7 +15,8 @@ Bower
 * Handlebars
 * Bootstrap
 
-To get started use:
+Get started:
+
     npm install
     bower install
     node server
