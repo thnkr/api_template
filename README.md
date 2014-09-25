@@ -15,7 +15,7 @@ Bower
 * Handlebars
 * Bootstrap
 
-Get started:
+### Get Started
 
     npm install
     bower install
@@ -23,7 +23,7 @@ Get started:
 
 This will start a web server at 8080 which is hosting the static page index.html. Forge will be injected into the Ember app and window for in browser encryption. A basic model is set up in Ember.
 
-The directory looks like this:
+### Directory Structure
 
     server.js
     /views/index.html
