@@ -2,6 +2,7 @@ var fs = require('fs'),
 	ejs = require('ejs'),
 	bodyParser = require('body-parser'),
 	express = require('express'),
+    mongo = require('./lib/database/mongo.js'),
 	app = express();
 
 	// Express Configuration
@@ -13,7 +14,6 @@ var fs = require('fs'),
     app.engine('.html', require('ejs').__express);
     app.listen(port);
 
-
 function error(status, msg) {
   var err = new Error(msg);
   err.status = status;
@@ -24,7 +24,7 @@ function error(status, msg) {
   var key = req.query['api-key'];
 
   // key isnt present
-  if (!key) return next(error(400, 'api key required'));
+  if (!key) return next(error(400, 'That...is not the key.'));
 
   // key is invalid
   if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
@@ -47,5 +47,6 @@ app.use(function(req,res,next){
 app.get('/', function(req, res){
 	res.render('index.html');
 });
+
 
 app.listen(port);
